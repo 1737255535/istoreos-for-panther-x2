@@ -240,7 +240,9 @@ jobs:
           sudo -E apt-get -y update
           sudo -E apt-get -y purge azure-cli ghc* zulu* llvm* firefox google* dotnet* powershell openjdk* mongodb* moby* || true
           #sudo -E apt-get -y install $(curl -fsSL https://is.gd/depend_ubuntu2204_openwrt)
-          sudo -E apt-get -y install $(cat ${{ github.workspace }}/make-openwrt/scripts/ubuntu2404-make-openwrt-depends)
+          #sudo -E apt-get -y install $(cat ${{ github.workspace }}/make-openwrt/scripts/ubuntu2404-make-openwrt-depends)
+          sudo -E curl -fsSL https://raw.githubusercontent.com/ophub/amlogic-s9xxx-openwrt/main/tools/init_env.sh | sudo -E bash
+          echo "status=success" >> ${GITHUB_OUTPUT}
           sudo -E systemctl daemon-reload
           #sudo -E apt-get -y full-upgrade
           sudo -E apt-get -y autoremove --purge
