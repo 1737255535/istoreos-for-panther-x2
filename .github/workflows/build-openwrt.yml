@@ -15,10 +15,10 @@ on:
         default: "openwrt-main"
         type: choice
         options:
-          - openwrt-main
-          - lede-master
-          - immortalwrt-master
-          - istoreos-main
+          - openwrt_main
+          - lede_master
+          - immortalwrt_master
+          - istoreos_main
       openwrt_board:
         description: "Select device board"
         required: false
