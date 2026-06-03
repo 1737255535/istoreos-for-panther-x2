@@ -341,11 +341,6 @@ jobs:
           make download -j8
           find dl -size -1024c -exec ls -l {} \;
           find dl -size -1024c -exec rm -f {} \;
-      
-      - name: Build luci-base host tools
-        run: |
-          make package/libs/luci-base/host/compile
-          make package/libs/luci-base/host/install
 
       - name: Compile the OpenWrt
         id: compile
