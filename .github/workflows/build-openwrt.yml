@@ -405,6 +405,7 @@ jobs:
           removeArtifacts: false
           replacesArtifacts: true
           #token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ACCESS_TOKEN }}
           
           body: |
             ### OpenWrt Image information
